@@ -4,7 +4,7 @@ title: About
 permalink: /about/
 ---
 
-<img src="C:\Users\rasim\Desktop\webdev\rasimalam\_data\alam_rasim.jpg">
+<img src="rasimalam\img\alam_rasim.jpg" />
 
 # Briefly, 
 
