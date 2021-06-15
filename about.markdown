@@ -4,6 +4,8 @@ title: About
 permalink: /about/
 ---
 
+<img src="rasimalam/_site/assets/alam_rasim.jpg">
+
 # Briefly, 
 
 I'm a data scientist and researcher who is interested in both the technical (how to machine learning) and policy side (why to machine learning) of frontier technology. I graduated from Harvard Kennedy School where I studied tech policy and data science. At Harvard, I taught my classmates data literacy, programming, and communicating with data as a teaching assistant and as President of the data science club.
