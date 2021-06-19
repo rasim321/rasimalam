@@ -14,6 +14,6 @@ Most recently, I wrote about the challenges and opportunities that frontier tech
 
 I received a BA in Economics and International Relations from Tufts University in 2017.
 
-Currently, I'm looking to work with mission-driven organizations in data science and analytics. You can find my resume [here](files\web_resume.pdf).
+Currently, I'm looking to work with mission-driven organizations in data science and analytics. You can find my resume [here.](files\web_resume.pdf)
 
 You can reach me at mrasim@hks.harvard.edu
