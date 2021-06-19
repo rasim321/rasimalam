@@ -3,7 +3,7 @@ layout: post
 title:  "Service Needs in Boston Neighborhoods"
 date:   2021-06-10 16:16:52 -0400
 category: project
-img: img/boston311.jpg/
+img: img/boston311.jpg
 excerpt: "Analyzing the needs of Boston neighborhoods from the 311 service calls dataset. Using R and ggplot, we try
           to see how Boston can improve services in each neighborhood."
 github: "https://github.com/rasim321/Boston-311"
