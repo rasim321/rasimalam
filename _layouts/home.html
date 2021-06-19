@@ -1,0 +1,51 @@
+---
+layout: default
+---
+
+<div class="home">
+  {%- if page.title -%}
+    <h1 class="page-heading">{{ page.title }}</h1>
+  {%- endif -%}
+
+  {{ content }}
+
+
+  {%- if site.posts.size > 0 -%}
+    <h2 class="post-list-heading">{{ page.list_title | default: "Projects" }}</h2>
+    <ul class="post-list">
+    
+      {%- for post in site.posts -%}
+      <li>
+        {%- if post.category contains "project" -%}
+          <div class="post-layout">
+          {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+            <div class="post-img"><img class="post-thumbnail-img" src={{ post.img | default: img_url }} /></div>
+
+            <div class="post-text">
+            <h3>
+              <a class="post-link" href="{{ post.url | relative_url }}">
+                {{ post.title | escape }}
+              </a>
+            </h3>
+            {%- if site.show_excerpts -%}
+              {{ post.excerpt }}
+            {%- endif -%}
+            <br>
+            <span class="post-meta">{{ post.date | date: date_format }}</span>
+            <br>
+          
+            <a href= {{ post.github | escape }} ><svg class="svg-icon"><use xlink:href="{{ '/assets/minima-social-icons.svg#github' | relative_url }}"></use></svg>Github Link <br>
+              <!-- <span class="username">{{ post.github| escape }}</span></a> -->
+    
+            </div>
+          
+          </div>
+        {%- endif -%}
+      </li>
+      {%- endfor -%}
+    </ul>
+    
+    <!-- <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p> -->
+  {%- endif -%}
+
+</div>
