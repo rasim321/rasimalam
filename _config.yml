@@ -22,8 +22,8 @@ title: Rasim Alam
 email: mrasim@hks.harvard.edu
 description: >- # this means to ignore newlines until "baseurl:"
   Pixels, Words, and Data Projects
-baseurl: "/rasimalam" # the subpath of your site, e.g. /blog
-url: "https://rasim321.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+# baseurl: "/rasimalam" # the subpath of your site, e.g. /blog
+url: "http://www.rasimalam.com" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: rasim_alam
 github_username:  rasim321
 show_excerpts: True
