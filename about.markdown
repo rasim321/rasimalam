@@ -1,10 +1,10 @@
 ---
 layout: page
 title: About
-permalink: /about/
+permalink: /about
 ---
 
-<img class='about-img' src="\rasimalam\img\proper.jpg" />
+<img class='about-img' src="img/proper.jpg" />
 
 # Briefly, 
 
