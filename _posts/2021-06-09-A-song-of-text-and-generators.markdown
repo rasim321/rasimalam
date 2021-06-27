@@ -135,9 +135,97 @@ After creating the inputs and labels, we shuffle, batch, and prefetch the data i
 
 # 5. Build the Model
 
-We initiate the pre-trained weights for the GPT-2 model from Huggingface. 
+We initiate the pre-trained weights for the Distil GPT-2 model from Huggingface. 
 
     # Build the model
     model = TFGPT2LMHeadModel.from_pretrained("distilgpt2")
 
+Distil GPT-2 is the most light weight version of GPT-2, hosting 84M parameters compared to the 124M for the full GPT-2 model. We use this model since it is twice as fast as the full GPT-2. 
 
+# 6. Hyperparameter Optimization
+
+Next, we will set some hyperparameters to ensure that our model runs efficiently. The learning rate determines how much the weights are updated in each epoch during training. We introduce a learning rate that is not so low that it causes a vanishing gradient problem and not so high that the global minima is never reached and the model converges to a suboptimal solution.
+
+    #Hyperparamters
+    learning_rate = 3e-5 
+
+The epsilon is a small constant that prevents dividing by zero in the denominator. The higher the epsilon the smaller the weight updates. 
+
+    epsilon=1e-08
+
+Cliptnorm prevents the exploding gradient problem. This is called gradient norm scaling where if the vector norm of a gradient exceeds a threshold (in our case 1.0) then the values of the vector will be rescaled so that the norm equals the threshold.
+
+    clipnorm=1.0
+
+An epoch is one forward pass and one backward pass of the entire dataset through the model. 
+
+    epochs = 30
+
+Now we can print the model summary and initialize the model optimizer with our chosen hyperparameters. 
+
+    # Print the model architecture
+    print(model.summary())
+
+    # Optimizer
+    optimizer = keras.optimizers.Adam(learning_rate=learning_rate, epsilon=epsilon, clipnorm=clipnorm)
+
+The loss function will be sparse categorical crossentropy since our labels are mutually exclusive and the metric will be accuracy. 
+
+    # Loss
+    loss = keras.losses.SparseCategoricalCrossentropy(from_logits=True)
+    #metric
+    metric = keras.metrics.SparseCategoricalAccuracy('accuracy')
+
+# 6. Compile and Train
+
+Now we just compile and train our model. 
+
+    # Compile
+    model.compile(loss=[loss, *[None] * model.config.n_layer],
+                    optimizer=optimizer,
+                    metrics=[metric])
+
+    # Train model
+    start_time = time.time()
+    training_results = model.fit(
+            train_data, # train_data.take(1000) for testing
+            epochs=epochs, 
+            verbose=1)
+    execution_time = (time.time() - start_time)/60.0
+    print("Training execution time (mins)",execution_time)
+
+# 7. Save Model and Weights
+
+It's a good idea to save our model and the weights once we are done with training. We can then just load the trained model whenever we want to generate new text. 
+
+
+    # Save the weights
+    model.save_weights('gpt_got1')
+
+    # And the model
+    model.save('my_model')
+
+# 8. The Winds of Winter
+
+Now let's generate our text!
+
+    # The model will use this text to generate new text
+    input_text = "Cersei sat on the iron throne"
+
+    # Tokenize Input
+    input_ids = gpt_tokenizer.encode(input_text, return_tensors='tf')
+    print("input_ids",input_ids)
+
+    # Generate outout
+    outputs = model.generate(
+        input_ids, 
+        do_sample=True, 
+        max_length=200, 
+        top_p=0.75, 
+        top_k=0
+    )
+
+    print("Generated text:")
+    display(gpt_tokenizer.decode(outputs[0], skip_special_tokens=True))
+
+And there we have it! Our text generator is live. 
