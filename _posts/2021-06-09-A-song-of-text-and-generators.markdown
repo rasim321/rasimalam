@@ -3,7 +3,7 @@ layout: post
 title:  "A Song of Text and Generators"
 date:   2021-06-09 14:16:52 -0400
 category: project
-img: img/got.jpg
+img: /img/got.jpg
 excerpt: "Training GPT-2 on Game of Thrones (Book 1) to generate new text for impatient fans of the series."
 github: "https://github.com/rasim321/A-Song-of-Text-and-Generators"
 ---

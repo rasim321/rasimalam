@@ -3,7 +3,7 @@ layout: post
 title:  "Slavery in Bengal: A Forgotten History"
 date:   2021-06-10 00:00:02 -0400
 category: writing
-img: ../img/bengal_slavery.jpg #for writing posts, put in '../' in front to get back to main folder
+img: /img/bengal_slavery.jpg #for writing posts, put in '../' in front to get back to main folder
 excerpt: "Notably absent in Bengali literature and history is a rather shameful past: the existence of slaves and the significant role that slavery played in our society and economy. It may very well be that many of our ancestors were slaves only a few generations ago, and hardly do we ever find mention of this great cruelty in our history books."
 github: "https://www.thedailystar.net/opinion/perspective/news/slavery-bengal-forgotten-history-1643383"
 ---

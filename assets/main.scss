@@ -44,3 +44,9 @@ body{
     margin-left: 20%;
     margin-right: auto;
 }
+
+@media(max-width: 700px){
+    .about-img{
+        margin: auto;
+    }
+}

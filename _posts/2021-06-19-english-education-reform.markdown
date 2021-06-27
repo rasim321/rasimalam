@@ -3,7 +3,7 @@ layout: post
 title:  "Improving Language Education in Bangladesh"
 date:   2021-06-18 00:00:03 -0400
 category: writing
-img: ../img/english_skills.jpg #for writing posts, put in '../' in front to get back to main folder
+img: /img/english_skills.jpg #for writing posts, put in '../' in front to get back to main folder
 excerpt: "By the time Bangladeshi students have graduated from high school, it is already too late to build the foundation of a comprehensive and meaningful education in the English (or Bangla) language. Free and mandatory primary education has been a radical solution to our historically high illiteracy, and primary school is exactly where the first step for language education reform should be introduced."
 github: "https://www.thedailystar.net/opinion/education/news/whats-stopping-us-improving-our-english-skills-1744009"
 ---

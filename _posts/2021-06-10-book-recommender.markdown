@@ -3,12 +3,12 @@ layout: post
 title:  "Book Recommender"
 date:   2021-06-10 16:16:52 -0400
 category: project
-img: ../img/bookrec.jpg
+img: /img/bookrec.jpg
 excerpt: "Book recommender that uses plot summaries from GoodReads and embeddings from Google's BERT model to recommend books."
 github: "https://github.com/rasim321/Book_Recommender"
 ---
 
-<img src="\rasimalam\img\bookrec.jpg" />
+<img src="/img/bookrec.jpg" />
 
 Check out the Book Recommender [here](https://gr-bookrec.herokuapp.com) 
 
