@@ -151,11 +151,11 @@ Next, we will set some hyperparameters to ensure that our model runs efficiently
 
 The epsilon is a small constant that prevents dividing by zero in the denominator. The higher the epsilon the smaller the weight updates. 
 
-    epsilon=1e-08
+    epsilon = 1e-08
 
 Cliptnorm prevents the exploding gradient problem. This is called gradient norm scaling where if the vector norm of a gradient exceeds a threshold (in our case 1.0) then the values of the vector will be rescaled so that the norm equals the threshold.
 
-    clipnorm=1.0
+    clipnorm = 1.0
 
 An epoch is one forward pass and one backward pass of the entire dataset through the model. 
 
