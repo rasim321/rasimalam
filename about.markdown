@@ -6,7 +6,6 @@ permalink: /about
 
 <img class='about-img' src="img/proper.jpg" />
 
-# Briefly, 
 
 Hello! I'm a data scientist and researcher interested in solving social challenges. I graduated from Harvard Kennedy School where I studied tech policy and machine learning. I enjoy bringing a data science perspective to policy challenges and in novel social science research. At Harvard, I taught my classmates data literacy, programming, and communicating with data as a teaching assistant.
 
